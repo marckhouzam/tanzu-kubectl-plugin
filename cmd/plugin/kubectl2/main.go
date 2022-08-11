@@ -23,6 +23,7 @@ var descriptor = cliv1alpha1.PluginDescriptor{
 	Description:    "Full kubectl functionality in tanzu",
 	Group:          cliv1alpha1.ExtraCmdGroup,
 	Aliases:        []string{"k2", "kctl2", "kube2"},
+	Version:        "v0.1.0",
 	CompletionType: cliv1alpha1.NativePluginCompletion,
 }
 
