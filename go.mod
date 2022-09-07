@@ -3,7 +3,7 @@ module github.com/marckhouzam/tanzu-kubectl-plugin
 go 1.17
 
 require (
-	github.com/vmware-tanzu/tanzu-framework v0.26.0
+
 )
 
 require (
