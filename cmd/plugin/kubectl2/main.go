@@ -15,8 +15,7 @@ import (
 	"github.com/spf13/cobra"
 
 	cliv1alpha1 "github.com/vmware-tanzu/tanzu-framework/apis/cli/v1alpha1"
-	"github.com/vmware-tanzu/tanzu-framework/cli/runtime/buildinfo"
-	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli/command/plugin"
+	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli/plugin"
 )
 
 var descriptor = cliv1alpha1.PluginDescriptor{
@@ -24,8 +23,8 @@ var descriptor = cliv1alpha1.PluginDescriptor{
 	Description:    "Full kubectl functionality in tanzu",
 	Group:          cliv1alpha1.ExtraCmdGroup,
 	Aliases:        []string{"k2", "kctl2", "kube2"},
-	Version:        buildinfo.Version,
-	BuildSHA:       buildinfo.SHA,
+	Version:        "v0.1.2",
+	BuildSHA:       "allo",
 	CompletionType: cliv1alpha1.NativePluginCompletion,
 }
 

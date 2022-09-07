@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
+	clitest "github.com/vmware-tanzu/tanzu-framework/cli/runtime/test"
 	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli"
-	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli/command/plugin"
-	clitest "github.com/vmware-tanzu/tanzu-framework/pkg/v1/test/cli"
+	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli/plugin"
 )
 
 var pluginName = "kubectl2"
