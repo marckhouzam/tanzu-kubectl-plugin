@@ -6,14 +6,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli"
-	"github.com/vmware-tanzu/tanzu-framework/pkg/v1/cli/command/plugin"
-	clitest "github.com/vmware-tanzu/tanzu-framework/pkg/v1/test/cli"
+	"github.com/vmware-tanzu/tanzu-framework/cli/runtime/plugin"
+	clitest "github.com/vmware-tanzu/tanzu-framework/cli/runtime/test"
 )
 
-var pluginName = "kubectl2"
+var pluginName = "kubectl"
 
-var descriptor = cli.NewTestFor(pluginName)
+var descriptor = clitest.NewTestFor(pluginName)
 
 func main() {
 	retcode := 0
@@ -44,8 +43,8 @@ func test(c *cobra.Command, _ []string) error {
 	// testName := clitest.GenerateName()
 	//
 	// err := m.RunTest(
-	// 	"create a kubectl2",
-	// 	fmt.Sprintf("kubectl2 create -n %s", testName),
+	// 	"create a kubectl",
+	// 	fmt.Sprintf("kubectl create -n %s", testName),
 	// 	func(t *clitest.Test) error {
 	// 		err := t.ExecContainsString("created")
 	// 		if err != nil {

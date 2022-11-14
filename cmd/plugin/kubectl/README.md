@@ -1,4 +1,4 @@
-# kubectl2
+# kubectl
 
 ## Summary
 
