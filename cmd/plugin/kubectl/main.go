@@ -14,19 +14,17 @@ import (
 	"github.com/aunum/log"
 	"github.com/spf13/cobra"
 
-	cliv1alpha1 "github.com/vmware-tanzu/tanzu-framework/cli/runtime/apis/cli/v1alpha1"
-	"github.com/vmware-tanzu/tanzu-framework/cli/runtime/buildinfo"
-	"github.com/vmware-tanzu/tanzu-framework/cli/runtime/plugin"
+	"github.com/vmware-tanzu/tanzu-plugin-runtime/plugin"
+	"github.com/vmware-tanzu/tanzu-plugin-runtime/plugin/buildinfo"
 )
 
-var descriptor = cliv1alpha1.PluginDescriptor{
-	Name:           "kubectl",
-	Description:    "Full kubectl functionality in tanzu",
-	Group:          cliv1alpha1.ExtraCmdGroup,
-	Aliases:        []string{"k", "kctl", "kube"},
-	Version:        buildinfo.Version,
-	BuildSHA:       buildinfo.SHA,
-	CompletionType: cliv1alpha1.NativePluginCompletion,
+var descriptor = plugin.PluginDescriptor{
+	Name:        "kubectl",
+	Description: "Full kubectl functionality in tanzu",
+	Group:       plugin.ExtraCmdGroup,
+	Aliases:     []string{"k", "kctl", "kube"},
+	Version:     buildinfo.Version,
+	BuildSHA:    buildinfo.SHA,
 }
 
 func main() {
